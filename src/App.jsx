@@ -29,7 +29,7 @@ const App = () => {
     }
   
     try {
-      const response = await axios.post('http://localhost:3000/enroll', formData);
+      const response = await axios.post('https://yoga-back.vercel.app/enroll', formData);
       // Handle the response here
       alert(response.data.message); // Show a simple alert with the response message
       console.log(response.data.message);
@@ -53,7 +53,9 @@ const App = () => {
 
   return (
     <div className="form-container" >
+      <h1>Yoga Classes By Flex-Money</h1>
       <form onSubmit={handleSubmit}>
+       <h2>Admission form</h2> 
         <input
           type="text"
           name="name"
