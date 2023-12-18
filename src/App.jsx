@@ -29,7 +29,7 @@ const App = () => {
     }
   
     try {
-      const response = await axios.post('https://yoga-back.vercel.app/enroll', formData);
+      const response = await axios.post('https://yogaback.onrender.com/enroll', formData);
       // Handle the response here
       alert(response.data.message); // Show a simple alert with the response message
       console.log(response.data.message);
