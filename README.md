@@ -10,9 +10,22 @@ This project implements an admission form for Yoga Classes, enabling individuals
 
 ## ER Diagram
 
-![ER Diagram](link_to_your_image)
-
 The ER diagram showcases the database schema and relationships:
+![ER Diagram](https://i.imgur.com/EzGdJLh.png)
+
+## Database Schema Design
+The database schema is designed based on the following ER diagram:
+
+    +------------------------+
+    |       Form             |
+    +------------------------+
+    | - _id     :   ObjectId |
+    | - name    :   String   |
+    | - age     :   String   |
+    | - batch   :   String   |
+    | - month   :   String   | 
+    | - payment :   String   |
+    +------------------------+
 
 - **Form Table:** Contains participant details such as name, age, selected batch, month, and payment information.
 
@@ -23,7 +36,7 @@ The ER diagram showcases the database schema and relationships:
 - **Relationships:** No explicit relationships between tables are necessary for this form's functionality.
 
 ### Functionality
-- **Validation:** Age validation ensures participants are within the specified age range.
+- **Validation:** Age validation ensures participants are within the specified age range(18-65).
 - **Payment Handling:** Simulated payment response is provided upon successful form submission.
 - **Error Handling:** Server-side and client-side error handling is implemented for various scenarios.
 
@@ -33,10 +46,11 @@ The ER diagram showcases the database schema and relationships:
 
 ## Installation and Usage
 
-1. Clone the repository.
-2. Navigate to the project directory.
-3. Install dependencies: `npm install`.
-4. Start the server: `npm start`.
+1. Clone the frontend repository.
+2. Clone the backend repository [here](https://github.com/yuvithakur007/yoga-back).
+3. Navigate to the project directory.
+4. Install dependencies: `npm install`.
+5. Start the server: `npm start`.
 
 ## Technologies Used
 
@@ -50,3 +64,44 @@ The ER diagram showcases the database schema and relationships:
 - Access the form by running the application and navigating to the provided URL.
 - Fill in participant details, select batch and month, and submit the form.
 - Handle payment simulation based on the provided response.
+
+
+-------------------------------------------------------------------------------------------
+## Testing
+
+### Form Validation
+
+1. **Name Field:**
+   - **Test Scenario:** Leave the "Name" field empty.
+   - **Expected Result:** An error message should appear, indicating that the "Name" field is required.
+
+   ![Name Field Validation](image.png)
+
+2. **Age Limit:**
+   - **Test Scenario:** Enter an age below 18 or above 65.
+   - **Expected Result:** An error message should appear, indicating that the age must be between 18 and 65.
+
+   ![Age Limit Validation](image-1.png)
+
+3. **Payment Field:**
+   - **Test Scenario:** Try to modify the "Payment" field (which is read-only).
+   - **Expected Result:** The field should remain uneditable.
+
+### Successful Payment
+
+1. **Complete Form Submission:**
+   - **Test Scenario:** Fill in all required fields with valid information.
+   - **Expected Result:** Upon successful form submission, an alert should appear.
+
+
+2. **Payment Success Simulation:**
+   - **Test Scenario:** Simulate a successful payment response.
+   - **Expected Result:** After form submission, the server should respond with a success message indicating both enrollment and payment were successful.
+
+  - The success alert will display "Your payment has been processed successfully!"
+
+  ![Alt text](image-2.png)
+  
+  - Show in the console "Enrollment and payment successful"
+  
+  ![Alt text](image-3.png)
