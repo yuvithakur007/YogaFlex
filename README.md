@@ -14,7 +14,7 @@ The ER diagram showcases the database schema and relationships:
 
 
 
-   ![ER diagram](./public/ER.jpg)
+   ![ER diagram](./images/ER.jpg)
 
 ## Database Schema Design
 The database schema is designed based on the following ER diagram:
@@ -73,13 +73,13 @@ The database schema is designed based on the following ER diagram:
    - **Test Scenario:** Leave the "Name" field empty.
    - **Expected Result:** An error message should appear, indicating that the "Name" field is required.
    
-   ![Name Validation](./public/name.png)
+   ![Name Validation](./images/name.png)
 
 2. **Age Limit:**
    - **Test Scenario:** Enter an age below 18 or above 65.
    - **Expected Result:** An error message should appear, indicating that the age must be between 18 and 65.
 
-    ![Age Validation](./public/age.png)
+    ![Age Validation](./images/age.png)
 
 
 3. **Payment Field:**
@@ -99,10 +99,10 @@ The database schema is designed based on the following ER diagram:
 
 - The success alert will display "Your payment has been processed successfully!"
 
-    ![Alert](./public/alert.png)
+    ![Alert](./images/alert.png)
 - Show in the console "Enrollment and payment successful"
 
-    ![Show in Console](./public/console.png)
+    ![Show in Console](./images/console.png)
 
 
 ## Database Records
@@ -113,4 +113,4 @@ The database schema is designed based on the following ER diagram:
    - **Test Scenario:** After successfully submitting the form, check the database for the stored user input.
    - **Expected Result:** A screenshot or image should be provided showing the database records with the entered participant details.
 
-   ![Database](./public/Data.png)
+   ![Database](./images/Data.png)
