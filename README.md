@@ -11,7 +11,10 @@ This project implements an admission form for Yoga Classes, enabling individuals
 ## ER Diagram
 
 The ER diagram showcases the database schema and relationships:
-![ER Diagram](https://i.imgur.com/EzGdJLh.png)
+
+
+
+   ![Image description](./public/ER.jpg)
 
 ## Database Schema Design
 The database schema is designed based on the following ER diagram:
@@ -40,10 +43,6 @@ The database schema is designed based on the following ER diagram:
 - **Payment Handling:** Simulated payment response is provided upon successful form submission.
 - **Error Handling:** Server-side and client-side error handling is implemented for various scenarios.
 
-### Assumptions Made
-- Participants can switch batches only at the start of a new month.
-- Payment processing is simulated and assumes success for demonstration purposes.
-
 ## Installation and Usage
 
 1. Clone the frontend repository.
@@ -66,7 +65,6 @@ The database schema is designed based on the following ER diagram:
 - Handle payment simulation based on the provided response.
 
 
--------------------------------------------------------------------------------------------
 ## Testing
 
 ### Form Validation
@@ -74,14 +72,15 @@ The database schema is designed based on the following ER diagram:
 1. **Name Field:**
    - **Test Scenario:** Leave the "Name" field empty.
    - **Expected Result:** An error message should appear, indicating that the "Name" field is required.
-
-   ![Name Field Validation](image.png)
+   
+   ![Image description](./public/name.png)
 
 2. **Age Limit:**
    - **Test Scenario:** Enter an age below 18 or above 65.
    - **Expected Result:** An error message should appear, indicating that the age must be between 18 and 65.
 
-   ![Age Limit Validation](image-1.png)
+    ![Image description](./public/age.png)
+
 
 3. **Payment Field:**
    - **Test Scenario:** Try to modify the "Payment" field (which is read-only).
@@ -98,10 +97,20 @@ The database schema is designed based on the following ER diagram:
    - **Test Scenario:** Simulate a successful payment response.
    - **Expected Result:** After form submission, the server should respond with a success message indicating both enrollment and payment were successful.
 
-  - The success alert will display "Your payment has been processed successfully!"
+- The success alert will display "Your payment has been processed successfully!"
 
-  ![Alt text](image-2.png)
-  
-  - Show in the console "Enrollment and payment successful"
-  
-  ![Alt text](image-3.png)
+    ![Image description](./public/alert.png)
+- Show in the console "Enrollment and payment successful"
+
+    ![Image description](./public/console.png)
+
+
+## Database Records
+
+### User Input in Database
+
+1. **Check Stored User Input:**
+   - **Test Scenario:** After successfully submitting the form, check the database for the stored user input.
+   - **Expected Result:** A screenshot or image should be provided showing the database records with the entered participant details.
+
+   ![Image description](./public/Data.png)
